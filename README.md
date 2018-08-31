@@ -33,3 +33,4 @@ Each section can have the following attributes.
 | init_args | no  | A JSON value for the arguments to use when creating an instance of the class, e.g. `{"max":40, "min": 20}`. |
 | read      | yes | The function to use to read values for the sensor/actuator device. This function should return a tuple of the form `(value, type, unit)` if this device widget requires type and unit to be specified. |
 | write     | no  | The function to use to write values to an actuator device. The value is passed in as a float. |
+| name      | no  | The initial display name used for the widget. If this is not specified the section name will be used. |
