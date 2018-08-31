@@ -14,7 +14,7 @@ A plugin for the [Cayenne Pi Agent](https://github.com/myDevicesIoT/Cayenne-Agen
 From the command line run the following commands to install this plugin.
 ```
 cd /etc/myDevices/plugins
-sudo git clone https://github.com/myDevicesIoT/example-device.git
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-example.git
 sudo service myDevices restart
 ```
 This will causes temporary widgets for the plugin to show up in the [Cayenne Dashboard](https://cayenne.mydevices.com). You can make them permanent by clicking the plus sign.
@@ -23,6 +23,7 @@ This will causes temporary widgets for the plugin to show up in the [Cayenne Das
 To modify the plugin you can add, update or remove sections and attributes in the `example-device.plugin` file. Each section corresponds to a sensor/actuator device widget that will be displayed in the [Cayenne Dashboard](https://cayenne.mydevices.com). The attributes determine which Python module, class and function is used to read and write data for that widget.
 
 Each section can have the following attributes.
+
 | Attribute     | Required      | Description  |
 | ------------- |:-------------:| ------------ |
 | enabled   | yes | If `true` this will send data to Cayenne, otherwise it will not |
