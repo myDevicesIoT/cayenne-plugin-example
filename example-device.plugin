@@ -7,25 +7,22 @@ init_args={"max":40, "min": 20}
 read=get_celsius
 
 [Incremental Temperature]
+inherit=Random Temperature
 enabled=true
 channel=1
-module=example-device
-class=ExampleSensor
-init_args={"max":30, "min": 20, "random": false}
+init_args={"max":30, "min": 20, "random": true}
 read=get_celsius
 
 [Random Humidity]
+inherit=Random Temperature
 enabled=true
 channel=2
-module=example-device
-class=ExampleSensor
 read=get_humidity
 
 [Random Pressure]
+inherit=Random Temperature
 enabled=true
 channel=3
-module=example-device
-class=ExampleSensor
 init_args={"max":10200, "min": 7000}
 read=get_pressure
 
@@ -38,10 +35,7 @@ read=read
 write=write
 
 [Analog Actuator]
+inherit=Digital Actuator
 enabled=true
 channel=5
-module=example-device
-class=ExampleActuator
-init_args={"digital": false}
-read=read
-write=write
+init_args={"digital": true}
