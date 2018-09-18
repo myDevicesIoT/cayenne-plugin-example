@@ -38,7 +38,7 @@ write=write
 inherit=Digital Actuator
 enabled=true
 channel=5
-init_args={"digital": true}
+init_args={"digital": false}
 
 [Digital Sensor]
 enabled=true
