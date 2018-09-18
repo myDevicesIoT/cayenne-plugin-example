@@ -27,7 +27,7 @@ Each section can have the following attributes.
 | Attribute     | Required      | Description  |
 | ------------- |:-------------:| ------------ |
 | enabled   | yes | If `true` this will send data to Cayenne, otherwise it will not. |
-| channel   | yes | The channel to use for this sensor/actuator device, e.g. 0. |
+| channel   | yes | The channel to use for this sensor/actuator device, e.g. 0. This should be a unique value for each section within the plugin file. |
 | module    | yes | The python module to use for the sensor/actuator device. It can be installed anywhere in the `PYTHONPATH` or just be in the plugin folder as the `.plugin` file, as it is for this example. |
 | class     | yes | The class within the specified module to use for the sensor/actuator device. |
 | init_args | no  | A JSON value for the arguments to use when creating an instance of the class, e.g. `{"max":40, "min": 20}`. |
@@ -35,3 +35,5 @@ Each section can have the following attributes.
 | write     | no  | The function to use to write values to an actuator device. The value is passed in as a float. |
 | name      | no  | The initial display name used for the widget. If this is not specified the section name will be used. |
 | inherit   | no  | The name of a section to inherit attributes from. The section to inherit from must precede the inheriting section in the plugin file. The *enabled*, *channel* and *name* attributes are not inherited. Attributes can be overridden by specifying new values in the inheriting section. If the *module*, *class* and *init_args* attributes are not overridden the inheriting section will use the same class instance as the section it inherits from. |
+| register_callback   | no  | The function used to register a callback the can be called in real-time when data changes. The callback parameter should be the same as the value returned from the `read` function. Data sent to the callback may be dropped if the number of calls exceed the rate limit for the Pi agent. |
+| unregister_callback | no  | The function used to unregister the callback that was registered via `register_callback`. |
