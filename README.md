@@ -39,3 +39,6 @@ Each section can have the following attributes.
 | inherit   | no  | The name of a section to inherit attributes from. The section to inherit from must precede the inheriting section in the plugin file. The *enabled*, *channel* and *name* attributes are not inherited. Attributes can be overridden by specifying new values in the inheriting section. If the *module*, *class* and *init_args* attributes are not overridden the inheriting section will use the same class instance as the section it inherits from. |
 | register_callback   | no  | The function to use to register a callback that can be called in real-time when data changes. The callback parameter should be the same as the value returned from the `read` function. Data sent to the callback may be dropped if the number of calls exceed the rate limit for the Pi agent. |
 | unregister_callback | no  | The function to use to unregister the callback that was registered via `register_callback`. |
+
+## Adding a Plugin
+To add a new plugin you can create a new `.plugin` file and define sections as described above. The `.plugin` file can be in its own directory under `/etc/myDevices/plugins`, with its Python code if needed, or in an existing one. Restart the Cayenne Agent (`sudo service myDevices restart`) to load the plugin.
