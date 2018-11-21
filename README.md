@@ -28,7 +28,7 @@ Each section can have the following attributes.
 | ------------- |:-------------:| ------------ |
 | enabled   | yes | If `true` this will send data to Cayenne, otherwise it will not. |
 | channel   | no | The channel to use for this sensor/actuator device, e.g. 0. This should be a unique value for each section within the plugin file. Any devices that send data to Cayenne need to set the channel attribute. If the device does not send data directly to Cayenne, e.g. an extension, it does not need to set the channel. |
-| module    | yes | The python module to use for the sensor/actuator device. It can be installed anywhere in the `PYTHONPATH` or just be in the plugin folder as the `.plugin` file, as it is for this example. |
+| module    | yes | The python module to use for the sensor/actuator device. It can be installed anywhere in the `PYTHONPATH` or just be in the same plugin folder as the `.plugin` file, as it is for this example. |
 | class     | yes | The class within the specified module to use for the sensor/actuator device. |
 | init_args | no  | A JSON value for the arguments to use when creating an instance of the class, e.g. `{"max":40, "min": 20}`. If `$channel` is used as a value it will be replaced by the channel attribute for the section.|
 | read      | yes | The function to use to read values for the sensor/actuator device. This function should return a tuple of the form `(value, type, unit)` if this device widget requires type and unit to be specified. For example, `(25.0, 'temp', 'c')` would specify a temperature of 25.0 degrees Celsius. To see the types and units available run `python3 -m myDevices.datatypes` from a command line. For more information run `python3 -m myDevices.datatypes -h`. |
