@@ -27,7 +27,7 @@ Each section can have the following attributes.
 | Attribute     | Required      | Description  |
 | ------------- |:-------------:| ------------ |
 | enabled   | yes | If `true` this will send data to Cayenne, otherwise it will not. |
-| channel   | no | The channel to use for this sensor/actuator device, e.g. 0. This should be a unique value for each section within the plugin file. Any devices that send data to Cayenne need to se the channel attribute. If the device does send data directly to Cayenne, e.g. an extension, it does not need to set the channel. |
+| channel   | no | The channel to use for this sensor/actuator device, e.g. 0. This should be a unique value for each section within the plugin file. Any devices that send data to Cayenne need to set the channel attribute. If the device does not send data directly to Cayenne, e.g. an extension, it does not need to set the channel. |
 | module    | yes | The python module to use for the sensor/actuator device. It can be installed anywhere in the `PYTHONPATH` or just be in the plugin folder as the `.plugin` file, as it is for this example. |
 | class     | yes | The class within the specified module to use for the sensor/actuator device. |
 | init_args | no  | A JSON value for the arguments to use when creating an instance of the class, e.g. `{"max":40, "min": 20}`. If `$channel` is used as a value it will be replaced by the channel attribute for the section.|
