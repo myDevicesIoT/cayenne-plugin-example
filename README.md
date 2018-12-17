@@ -17,7 +17,9 @@ cd /etc/myDevices/plugins
 sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-example.git
 sudo service myDevices restart
 ```
-This will causes temporary widgets for the plugin to show up in the [Cayenne Dashboard](https://cayenne.mydevices.com). You can make them permanent by clicking the plus sign.
+Temporary widgets for the plugin should now show up in the [Cayenne Dashboard](https://cayenne.mydevices.com). You can make them permanent by clicking the plus sign.
+
+Note: If you have issues with the temporary widgets showing up try refreshing the Cayenne Dashboard or restarting the agent again using `sudo service myDevices restart`.
 
 ## Modifying the Plugin
 To modify the plugin you can add, update or remove sections and attributes in the `example-device.plugin` file. Each section corresponds to a sensor/actuator device widget that will be displayed in the [Cayenne Dashboard](https://cayenne.mydevices.com). The attributes determine which Python module, class and function is used to read and write data for that widget.
