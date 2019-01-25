@@ -22,7 +22,7 @@ Temporary widgets for the plugin should now show up in the [Cayenne Dashboard](h
 NOTE: If the temporary widgets do not show up try refreshing the [Cayenne Dashboard](https://cayenne.mydevices.com) or restarting the agent again using `sudo service myDevices restart`.
 
 ## Modifying the Plugin
-To modify the plugin you can add, update or remove sections and attributes in the `example-device.plugin` file. Each section corresponds to a sensor/actuator device widget that will be displayed in the [Cayenne Dashboard](https://cayenne.mydevices.com). The attributes determine which Python module, class and function is used to read and write data for that widget.
+To modify the plugin you can add, update or remove sections and attributes in the `example_device.plugin` file. Each section corresponds to a sensor/actuator device widget that will be displayed in the [Cayenne Dashboard](https://cayenne.mydevices.com). The attributes determine which Python module, class and function is used to read and write data for that widget.
 
 Each section can have the following attributes.
 

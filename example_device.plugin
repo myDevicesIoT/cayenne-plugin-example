@@ -1,7 +1,7 @@
 [Random Temperature]
 enabled=true
 channel=0
-module=example-device
+module=example_device
 class=ExampleSensor
 init_args={"max":40, "min": 20}
 read=get_celsius
@@ -29,7 +29,7 @@ read=get_pressure
 [Digital Actuator]
 enabled=true
 channel=4
-module=example-device
+module=example_device
 class=ExampleActuator
 read=read
 write=write
@@ -43,7 +43,7 @@ init_args={"digital": false}
 [Digital Sensor]
 enabled=true
 channel=6
-module=example-device
+module=example_device
 class=ExampleCallbackSensor
 read=read
 register_callback=register_callback
